@@ -1,21 +1,21 @@
 theme: jekyll-theme-slate
 
 collections:
-  authors:
+  topics:
     output: true
 
     
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "topics"
     values:
-      layout: "author"
+      layout: "topic"
   - scope:
       path: ""
-      type: "posts"
+      type: "notes"
     values:
-      layout: "post"
+      layout: "note"
   - scope:
       path: ""
     values:

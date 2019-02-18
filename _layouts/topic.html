@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+
+{{ content }}
+
+<h2>Notes</h2>
+<ul>
+  {% assign filtered_notes = site.notes | where: 'tags', page.name %}
+  {% for note in filtered_notes %}
+    <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+  {% endfor %}
+</ul>

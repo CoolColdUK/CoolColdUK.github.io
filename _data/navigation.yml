@@ -1,4 +1,4 @@
 - name: Home
   link: /
-- name: Staff
-  link: /staff.html
+- name: Topic
+  link: /topics.html
