@@ -4,8 +4,6 @@ collections:
   notes:
     output: true
     permalink: /:categories/:title
-
-collections:
   topics:
     output: true
 
