@@ -1,9 +1,9 @@
 theme: jekyll-theme-slate
 
 collections:
-  topics:
-    output: true
   notes:
+    output: true
+  topics:
     output: true
 
     
