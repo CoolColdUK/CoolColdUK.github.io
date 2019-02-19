@@ -5,6 +5,12 @@ title: Topic
 <h1>Topics</h1>
 
 <ul>
+  {% for note in site.notes %}
+    <li>
+      <h2><a href="{{ note.url }}">{{ note.name }}</a></h2>
+      <p>{{ note.content | markdownify }}</p>
+    </li>
+  {% endfor %}
   {% for topic in site.topics %}
     <li>
       <h2><a href="{{ topic.url }}">{{ topic.name }}</a></h2>
@@ -12,10 +18,4 @@ title: Topic
     </li>
   {% endfor %}
   
-  {% for note in site.notes %}
-    <li>
-      <h2><a href="{{ note.url }}">{{ note.name }}</a></h2>
-      <p>{{ note.content | markdownify }}</p>
-    </li>
-  {% endfor %}
 </ul>

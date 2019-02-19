@@ -7,7 +7,6 @@ layout: default
 
 <h2>Notes</h2>
 <ul>
-  {% assign filtered_notes = site.notes | contains: 'tags', page.name %}
   {% for note in site.notes %}
     <li><a href="{{ note.url }}">{{ note.title }}</a></li>
   {% endfor %}
