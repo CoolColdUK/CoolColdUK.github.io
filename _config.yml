@@ -3,6 +3,7 @@ theme: jekyll-theme-slate
 collections:
   notes:
     output: true
+    permalink: /:categories/:title
 
 collections:
   topics:
