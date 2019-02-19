@@ -1,3 +1,4 @@
 <div>
-    page date: {{ page.date | date_to_string }}
+    build on: {{ site.time | date_to_string }}
+    , last modified: {{page.last_modified_at}}
 </div>
