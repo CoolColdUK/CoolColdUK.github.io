@@ -24,4 +24,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-      permalink: /:categories/:title
