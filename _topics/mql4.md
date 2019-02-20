@@ -14,10 +14,10 @@ mql4 language related stuff
 <ul>
   {% for note in site.notes %}
   
-    {% assign total_tags_c = note.tags | size %}
-    {{total_tags_c}}<br />
+    {% assign note_tags_c = note.tags | size %}
+    {{note_tags_c}}<br />
     {{page_tags_c}}<br />
-    {% assign total_tags_c = total_tags_c + page_tags_c %}
+    {% assign total_tags_c = note_tags_c + page_tags_c %}
     {{total_tags_c}}<br />
     {% assign combine_tags_c = page.tags | combine: note.tags | uniq %}
 
@@ -25,6 +25,9 @@ mql4 language related stuff
     {% for p in note.tags  %}
       {{p}}<br />
     {% endfor %}
+    {% if total_tags_c > combine_tags_c%}
+      -----
+    {% endif %}
     <hr />
   {% endfor %}
   
