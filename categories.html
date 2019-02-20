@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Topic
-permalink: /topics
+title: Categories
+permalink: /categories
 ---
 <h1>Topics</h1>
 
@@ -9,8 +9,9 @@ permalink: /topics
 {% for note in site.notes %}
   {% assign categories = categories | concat:note.categories %}
 {% endfor %}
-<hr />
+
 {{ categories }}
+<hr />
 {% for note in site.notes %}
   {{note.relative_path}}
 {% endfor %}
@@ -18,10 +19,10 @@ permalink: /topics
 <hr />
 {{ dir }}
 <ul>
-  {% for topic in site.topics %}
+  {% for category in site.categories %}
     <li>
-      <h2><a href="{{ topic.url }}">{{ topic.name }}</a></h2>
-      <p>{{ topic.content | markdownify }}</p>
+      <h2><a href="{{ category.url }}">{{ category.name }}</a></h2>
+      <p>{{ category.content | markdownify }}</p>
     </li>
   {% endfor %}
   
