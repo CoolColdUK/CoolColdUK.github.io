@@ -13,8 +13,6 @@ mql4 language related stuff
 
     {% assign combine_tags_c = page.tags | combine: note.tags | uniq %}
     {{ total_tags_c }}
-    <br />
-    {{ combine_tags_c }}
     {% comment %}
     {% if combine_tags_c < total_tags_c %}
         <li>
