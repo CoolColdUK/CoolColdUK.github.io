@@ -13,7 +13,7 @@ permalink: /topics
 {{ categories }}
 
 {% for note in site.notes %}
-  {% assign dir = dir | concat:note.dir %}
+  {% assign dir = dir | concat:note.relative_directory %}
 {% endfor %}
 <br />
 {{ dir }}
