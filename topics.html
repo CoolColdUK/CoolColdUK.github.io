@@ -1,6 +1,20 @@
 ---
 layout: default
-title: topics
-permalink: /topics
 ---
-<h1>Topics</h1>
+<h1>{{page.title}}</h1>
+<h6>Related tags: {{page.tags | join: ", "}}</h6>
+
+{% assign page_tags_c = page.tags | size %}
+
+{% for note in site.notes %}
+
+{% assign note_tags_c = note.tags | size | plus: page_tags_c %}
+
+{% assign combine_tags = page.tags | combine: note.tags %}
+{% assign combine_tags_u = combine_tags | uniq %}
+{% assign combine_tags_c = combine_tags_u | size %}
+
+{% if note_tags_c > combine_tags_c %}
+[{{note.title}}]({{note.url}})
+{% endif %}
+{% endfor %}
