@@ -1,5 +1,5 @@
 ---
-topics: jekyll
+tags: jekyll
 ---
 
 >{% assign categories = site.emptyArray %}
