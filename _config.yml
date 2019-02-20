@@ -6,6 +6,7 @@ collections:
     permalink: /:path
   topics:
     output: true
+    permalink: /:path
 
     
 defaults:
