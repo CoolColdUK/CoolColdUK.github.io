@@ -12,7 +12,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "topic"
+      type: "topics"
     values:
       layout: "topic"
   - scope:

@@ -3,9 +3,7 @@ name: mql4
 full_name: mql4
 tags: [mql4,mt4]
 ---
-an object-oriented programming language, was written specifically for work on MT4. Syntax based on C.
-
-
+mql4 language related stuff
 
 <ul>
   {% for note in site.notes %}
