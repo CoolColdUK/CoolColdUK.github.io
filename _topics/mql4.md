@@ -12,8 +12,9 @@ mql4 language related stuff
     {% assign total_tags_c = total_tags_c + page_tags_c %}
 
     {% assign combine_tags_c = page.tags | combine: note.tags | uniq %}
-    {{ total_tags_c }}
+    
     {% comment %}
+    {{ total_tags_c }}
     {% if combine_tags_c < total_tags_c %}
         <li>
         <h2><a href="{{ note.url }}">{{ note.name }}</a></h2>
