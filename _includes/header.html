@@ -1,12 +1,23 @@
-<nav class="navbar navbar-expand-sm bg-light justify-content-center">
-    <!-- Links -->
-    <ul class="navbar-nav">
-        {% for item in site.data.navigation %}
-        <li class="nav-item">
-            <a {% if page.url==item.link %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ item.link }}">
-                {{ item.name }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+<nav class="navbar navbar-expand-sm bg-dark justify-content-center">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <!-- Links -->
+        <ul class="nav navbar-nav">
+            <li {% if page.url==item.link %} class="nav-item active" {% else %} class="nav-item" {% endif %}><a href="#"
+                    class="nav-link">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    {% for topic in site.topics %}
+                    <li>
+                        <a href="{{ topic.url }}">{{ topic.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
