@@ -5,6 +5,20 @@ permalink: /topics
 ---
 <h1>Topics</h1>
 
+{% assign categories = [] %}
+{% for note in site.notes %}
+  {% assign categories = categories | concat:note.category %}
+{% endfor %}
+
+<ul>
+    {% for topic in categories %}
+      <li>
+        <p>{{ topic }}</p>
+      </li>
+    {% endfor %}
+    
+  </ul>
+
 <ul>
   {% for topic in site.topics %}
     <li>
