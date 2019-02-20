@@ -7,20 +7,24 @@ mql4 language related stuff
 
 {% assign page_tags_c = page.tags | size %}
 {% for p in page.tags  %}
-{{p}}<br />
+  {{p}}<br />
 {% endfor %}
+{{page_tags_c}}
 <hr />
 <ul>
   {% for note in site.notes %}
   
-{% for p in note.tags  %}
-{{p}}<br />
-{% endfor %}
-<hr />
     {% assign total_tags_c = note.tags | size %}
+    {{total_tags_c}}<br />
+    {{page_tags_c}}<br />
     {% assign total_tags_c = total_tags_c + page_tags_c %}
-{{total_tags_c}}
+    {{total_tags_c}}<br />
     {% assign combine_tags_c = page.tags | combine: note.tags | uniq %}
+
+    
+    {% for p in note.tags  %}
+      {{p}}<br />
+    {% endfor %}
     <hr />
   {% endfor %}
   
