@@ -14,7 +14,7 @@ mql4 language related stuff
 <ul>
   {% for note in site.notes %}
   
-    {% assign note_tags_c = note.tags | size %}
+    {% assign note_tags_c = note.tags | size | plus: page_tags_c  %}
     {{note_tags_c}}<br />
     {{page_tags_c}}<br />
     {% assign total_tags_c = note_tags_c | plus: page_tags_c %}
