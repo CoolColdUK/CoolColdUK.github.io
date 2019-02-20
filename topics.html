@@ -12,7 +12,7 @@ permalink: /topics
 
 {{ categories }}
 {% for note in site.notes %}
-  {{note.path}}
+  {{note.relative_path}}
 {% endfor %}
 <br />
 {{ dir }}
