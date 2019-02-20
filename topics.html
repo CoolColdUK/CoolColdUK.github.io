@@ -11,7 +11,9 @@ permalink: /topics
 {% endfor %}
 
 {{ categories }}
-{{ site.collections[0].label }}
+{% for note in site.notes %}
+  {{note.path}}
+{% endfor %}
 <br />
 {{ dir }}
 <ul>
