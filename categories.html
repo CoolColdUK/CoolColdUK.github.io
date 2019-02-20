@@ -9,12 +9,13 @@ permalink: /topics
 {% for note in site.notes %}
   {% assign categories = categories | concat:note.categories %}
 {% endfor %}
-
+<hr />
 {{ categories }}
 {% for note in site.notes %}
   {{note.relative_path}}
 {% endfor %}
-<br />
+
+<hr />
 {{ dir }}
 <ul>
   {% for topic in site.topics %}
