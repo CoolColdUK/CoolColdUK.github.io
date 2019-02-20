@@ -10,16 +10,25 @@
     <title>{{ page.title }}</title>
 </head>
 
-<body class="col-sm-3">
-
-    <div class="bg-dark text-light w-75 align-content-center">
-        {% include header.html %}
-        <div class="content">
-            {{content}}
-        </div>
-
-        {% include footer.html %}
+<body>
+    <div class="row">
+            <div class="col-sm-2">&nbsp;</div>
+        <div class="col-sm-8">{% include header.html %}</div>
+        <div class="col-sm-2">&nbsp;</div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-2">&nbsp;</div>
+        <div class="col-sm-8">{{content}}</div>
+        <div class="col-sm-2">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">&nbsp;</div>
+        <div class="col-sm-8">{% include footer.html %}</div>
+        <div class="col-sm-2">&nbsp;</div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
