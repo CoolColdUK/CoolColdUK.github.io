@@ -11,10 +11,7 @@ permalink: /topics
 {% endfor %}
 
 {{ categories }}
-
-{% for note in site.notes %}
-  {% assign dir = dir | concat:note.relative_path %}
-{% endfor %}
+{{ site.collections[0].label }}
 <br />
 {{ dir }}
 <ul>
