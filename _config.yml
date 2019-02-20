@@ -11,9 +11,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "categories"
+      type: "topics"
     values:
-      layout: "category"
+      layout: "topic"
   - scope:
       path: ""
       type: "notes"

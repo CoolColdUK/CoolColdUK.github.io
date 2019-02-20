@@ -1,6 +1,6 @@
 - name: Home
   link: /
-- name: Category
-  link: /categories.html
+- name: topic
+  link: /topics.html
 - name: Notes
   link: /notes.html
