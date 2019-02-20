@@ -15,8 +15,9 @@ mql4 language related stuff
     
     {% if combine_tags_c < total_tags_c %}
         <li>
-        <h2><a href="{{ topic.url }}">{{ topic.name }}</a></h2>
-        <p>{{ topic.content | markdownify }}</p>
+        <h2><a href="{{ note.url }}">{{ note.name }}</a></h2>
+        <p>{{ note.content | markdownify }}</p>
+        {% combine_tags_c %}<br>{% total_tags_c %}
         </li>
     {% endif %}
   {% endfor %}
