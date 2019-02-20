@@ -5,7 +5,7 @@ permalink: /topics
 ---
 <h1>Topics</h1>
 
-{% assign categories = [] %}
+{% assign categories = site.emptyArray %}
 {% for note in site.notes %}
   {% assign categories = categories | concat:note.category %}
 {% endfor %}
