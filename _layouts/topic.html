@@ -1,13 +1,25 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-
+<h1>{{page.title}}</h1>
+<h6>Related tags: {{page.tags | join: ", "}}</h6>
 {{ content }}
 
-<h2>Notes</h2>
+{% assign page_tags_c = page.tags | size %}
+
 <ul>
   {% for note in site.notes %}
-    <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+
+  {% assign note_tags_c = note.tags | size | plus: page_tags_c %}
+
+  {% assign combine_tags = page.tags | combine: note.tags %}
+  {% assign combine_tags_u = combine_tags | uniq %}
+  {% assign combine_tags_c = combine_tags_u | size %}
+
+  {% if note_tags_c > combine_tags_c %}
+    <li>
+      <a href="({{note.url}})">{{note.title}}</a>
+    </li>
+  {% endif %}
   {% endfor %}
 </ul>
