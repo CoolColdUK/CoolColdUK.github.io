@@ -4,21 +4,3 @@ title: topics
 permalink: /topics
 ---
 <h1>Topics</h1>
-
-{% assign topics = site.emptyArray %}
-{% for note in site.notes %}
-  {% assign topics = topics | concat:note.topics %}
-{% endfor %}
-
-{{ topics }}
-<hr />
-{{ dir }}
-<ul>
-  {% for topic in site.topics %}
-    <li>
-      <h2><a href="{{ topic.url }}">{{ topic.name }}</a></h2>
-      <p>{{ topic.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-  
-</ul>
