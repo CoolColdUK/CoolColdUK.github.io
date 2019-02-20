@@ -6,15 +6,19 @@ layout: default
 
 {% assign page_tags_c = page.tags | size %}
 
-{% for note in site.notes %}
+<ul>
+  {% for note in site.notes %}
 
-{% assign note_tags_c = note.tags | size | plus: page_tags_c %}
+  {% assign note_tags_c = note.tags | size | plus: page_tags_c %}
 
-{% assign combine_tags = page.tags | combine: note.tags %}
-{% assign combine_tags_u = combine_tags | uniq %}
-{% assign combine_tags_c = combine_tags_u | size %}
+  {% assign combine_tags = page.tags | combine: note.tags %}
+  {% assign combine_tags_u = combine_tags | uniq %}
+  {% assign combine_tags_c = combine_tags_u | size %}
 
-{% if note_tags_c > combine_tags_c %}
-[{{note.title}}]({{note.url}})
-{% endif %}
-{% endfor %}
+  {% if note_tags_c > combine_tags_c %}
+    <li>
+      <a href="({{note.url}})">{{note.title}}</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+</ul>
