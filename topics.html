@@ -12,11 +12,6 @@ permalink: /topics
 
 {{ topics }}
 <hr />
-{% for note in site.notes %}
-  {{note.relative_path}}
-{% endfor %}
-
-<hr />
 {{ dir }}
 <ul>
   {% for topic in site.topics %}
