@@ -3,7 +3,6 @@ theme: jekyll-theme-slate
 collections:
   notes:
     output: true
-    #permalink: /:categories/:title
     permalink: /:path
   topics:
     output: true
