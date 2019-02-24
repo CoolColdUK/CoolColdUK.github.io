@@ -8,7 +8,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>{{ page.title }}</title>
+    <title>CoolCold Notebook</title>
 </head>
 
 <body class="content">
@@ -18,52 +18,43 @@
 
             <!--nav-->
             <nav class="row navbar navbar-expand-lg text-primary bg-primary">
-                <!--logo-->
                 <a class="navbar-brand text-primary" href="/">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!--menu items-->
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Dropdown
+                                Topics
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+
+                                <a class="dropdown-item" href="/liquid">liquid</a>
+
+                                <a class="dropdown-item" href="/mql4">mql4</a>
+
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
                         </li>
                     </ul>
                 </div>
+
+
+
             </nav>
+
+
 
             <!--content-->
             <div class="row bg-secondary text-secondary px-3">
-                {{content}}
+                <p>This is just a notebook for myself on things I have learnt while going through tutorials and a
+                    playground to learn bootstrap 4</p>
             </div>
 
-            <!--footer-->
             <div class="row bg-primary p-3 text-primary text-center small">
-                All rights reserved. build on: {{ site.time | date: "%Y-%m-%d %H:%M:%S" }}, page updated: {{
-                page.date
-                | date: "%Y-%m-%d %H:%M:%S" }}
+                All rights reserved. build on: 2019-02-24 16:34:09, page updated:
             </div>
         </div>
 
