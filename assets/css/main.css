@@ -1,0 +1,25 @@
+body{
+    /*background:#0b0c10;*/
+}
+.bg-primary{
+    background: #45a29e!important;
+}
+.bg-secondary{
+    background: #66fcf1!important;
+}
+.bg-dark{
+    background: #1F2833!important;
+
+}
+.bg-light{
+    background: #c5c6c7!important;
+
+}
+
+.text-primary{
+    color: #66fcf1!important;
+}
+
+.text-secondary{
+    color: #45a29e!important;
+}

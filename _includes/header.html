@@ -1,21 +1,5 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <!-- Links -->
-        <ul class="nav navbar-nav">
-            <li {% if page.url==item.link %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
-                <a href="/" class="nav-link">ccBlog</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    {% for topic in site.topics %}
-                    <li>
-                        <a href="{{ topic.url }}">{{ topic.name }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
-    </div>
+<nav class="row navbar navbar-expand-lg text-primary bg-primary">
+    {% include logo %}
+    {% include menu %}    
 </nav>
+

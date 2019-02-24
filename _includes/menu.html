@@ -1,0 +1,17 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Topics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">                
+                {% for topic in site.topics %}
+                <li>
+                    <a class="dropdown-item" href="{{ topic.url }}">{{ topic.name }}</a>
+                </li>
+                {% endfor %}
+            </div>
+        </li>
+    </ul>
+</div>
