@@ -14,13 +14,13 @@ defaults:
       path: ""
       type: "topics"
     values:
-      layout: "topic"
+      layout: "topic_bs4grid"
   - scope:
       path: ""
       type: "notes"
     values:
-      layout: "note"
+      layout: "note_bs4grid"
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "default_bs4grid"

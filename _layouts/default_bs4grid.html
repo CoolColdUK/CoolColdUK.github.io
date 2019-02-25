@@ -10,23 +10,16 @@
     <title>{{ page.title }}</title>
 </head>
 
-<body class="content">
-    <div class="row">
-        <div class="col">&nbsp;</div>
-        <div class="col-sm-8">
+<body>
+    <div class="container col-sm-8">
+        <!--header-->
+        {% include header_bs4grid.html %}
 
-            <!--header-->
-            {% include header_bs4grid.html %}
+        <!--content-->
+        {{content}}
 
-            <!--content-->
-            {{content}}
-
-            <!--footer-->
-            {% include footer_bs4grid.html %}
-        </div>
-
-
-        <div class="col">&nbsp;</div>
+        <!--footer-->
+        {% include footer_bs4grid.html %}
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
