@@ -1,15 +1,25 @@
 ---
 layout: default_bs4grid
 ---
-<h1 class="row bg-secondary text-secondary px-3">{{page.title}}</h1>
-<h6 class="row bg-secondary text-secondary px-3">Related tags: {{page.tags | join: ", "}}</h6>
+
+<div class="row bg-secondary text-secondary px-3">
+  <h1>
+    {{ page.title }}
+  </h1>
+</div>
+
+<div class="row bg-secondary text-secondary px-3">
+  <h6>
+    Related tags: {{page.tags | join: ", "}}
+  </h6>
+</div>
 <div class="row bg-secondary text-secondary px-3">
   {{ content }}
 </div>
 <div class="row bg-secondary text-secondary px-3">
   {% assign page_tags_c = page.tags | size %}
 
-  <ul>
+  <div class="flex-content">
     {% for note in site.notes %}
 
     {% assign note_tags_c = note.tags | size | plus: page_tags_c %}
@@ -20,10 +30,11 @@ layout: default_bs4grid
 
     {% if note_tags_c > combine_tags_c %}
     <li>
-      <a href="{{note.url}}">{{note.title}}</a>
+      <a href="{{note.url}}" class="btn btn-info" role="button">{{note.title}}</a>
     </li>
     {% endif %}
     {% endfor %}
-  </ul>
+    </ul>
 
+  </div>
 </div>
