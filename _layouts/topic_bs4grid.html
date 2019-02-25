@@ -29,12 +29,9 @@ layout: default_bs4grid
     {% assign combine_tags_c = combine_tags_u | size %}
 
     {% if note_tags_c > combine_tags_c %}
-    <li>
-      <a href="{{note.url}}" class="btn btn-info" role="button">{{note.title}}</a>
-    </li>
+    <a href="{{note.url}}" class="btn btn-info" role="button">{{note.title}}</a>
     {% endif %}
     {% endfor %}
-    </ul>
 
   </div>
 </div>
