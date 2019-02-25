@@ -2,10 +2,7 @@
 layout: default_bs4grid
 ---
 
-<div class="row bg-secondary text-secondary px-3">
-  &nbsp;
-</div>
-<div class="row bg-secondary text-secondary px-3">
+<div class="row bg-secondary text-secondary px-3 pt-3">
   <h1>
     {{ page.title }}
   </h1>
@@ -19,7 +16,7 @@ layout: default_bs4grid
 <div class="row bg-secondary text-secondary px-3">
   {{ content }}
 </div>
-<div class="row bg-secondary text-secondary px-3">
+<div class="row bg-secondary text-secondary px-3 pb-3">
   {% assign page_tags_c = page.tags | size %}
 
   <div class="flex-content">
@@ -37,8 +34,4 @@ layout: default_bs4grid
     {% endfor %}
 
   </div>
-</div>
-
-<div class="row bg-secondary text-secondary px-3">
-  &nbsp;
 </div>
