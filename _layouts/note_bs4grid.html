@@ -10,7 +10,7 @@ layout: default_bs4grid
 
 <div class="row bg-secondary text-secondary px-3">
     <h6>
-        {{ page.tags }}
+        Related tags: {{page.tags | join: ", "}}
     </h6>
 </div>
 
