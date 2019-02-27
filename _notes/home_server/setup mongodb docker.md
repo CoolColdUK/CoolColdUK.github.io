@@ -1,5 +1,5 @@
 ---
-tags: docker,mongodb,home_server
+tags: [docker,mongodb,home_server]
 ---
 ## basic settings
 1. CPU = 25
