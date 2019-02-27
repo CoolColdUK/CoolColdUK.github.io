@@ -17,19 +17,20 @@ layout: default_bs4grid
   {{ content }}
 </div>
 <div class="row bg-secondary text-secondary px-3 pb-3">
-  {% assign page_tags_c = page.tags | size %}
+    {% assign page_tags_s = page.tags | split: ',' %}
+    {% assign page_tags_c = page.tags | size %}
 
   <div class="flex-content">
     {% for note in site.notes %}
-
-      {% assign note_tags_c = note.tags | size | plus: page_tags_c %}
+      {% assign note_tags_c = note.tags | size %}
+      {% assign total_tags_c = note_tags_c | plus: page_tags_c %}
 
       {% assign combine_tags = page.tags | combine: note.tags %}
       {% assign combine_tags_u = combine_tags | uniq %}
       {% assign combine_tags_c = combine_tags_u | size %}
 
-      {% if note_tags_c > combine_tags_c %}
-        <a href="{{note.url}}" class="btn btn-info" role="button">{{note.title}}/{{note_tags_c}}/{{combine_tags_c}}</a>
+      {% if total_tags_c > combine_tags_c %}
+        <a href="{{note.url}}" class="btn btn-info" role="button">{{note.title}}/{{total_tags_c}}/{{combine_tags_c}}</a>
         {%else%}
         {{note.title}}
       {% endif %}

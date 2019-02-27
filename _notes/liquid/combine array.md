@@ -1,5 +1,5 @@
 ---
-tags: jekyll, liquid
+tags: jekyll,liquid
 ---
 {% raw %}
 >{% assign categories = site.emptyArray %}  
