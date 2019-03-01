@@ -25,8 +25,15 @@ layout: default_bs4grid
       {% assign note_tags_s = note.tags | split: ',' %}
       {% assign note_tags_c = note_tags_s | size %}
       {% assign total_tags_c = note_tags_c | plus: page_tags_c %}
+<<<<<<< HEAD
+=======
+      note tag size {{note_tags_c}}
+      total size {{total_tags_c}}
+>>>>>>> parent of f9131cd... Update topic_bs4grid.html
 
-      {% assign combine_tags = page_tags_s | concat: note_tags_s %}
+      
+
+      {% assign combine_tags = page_tags_s | combine: note_tags_s %}
       {% assign combine_tags_u = combine_tags | uniq %}
       {% assign combine_tags_c = combine_tags_u | size %}
       {% if total_tags_c > combine_tags_c %}
