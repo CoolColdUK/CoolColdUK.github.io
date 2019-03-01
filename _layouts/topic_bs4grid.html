@@ -26,7 +26,7 @@ layout: default_bs4grid
 - {{ item }}
 {% endfor %}
 <div class="row bg-secondary text-secondary px-3 pb-3">
-    {% assign page_tags_s = page.tags | split: "," %}
+    {% assign page_tags_s = page.tags | split: " " %}
     {% assign page_tags_c = page.tags | size %}
     {{page_tags_s}}<br />
     {{page.tags}}<br />
@@ -36,7 +36,7 @@ layout: default_bs4grid
       title {{note.title}}
       tags {{note.tags}}
     
-      {% assign note_tags_s = note.tags | split: "," %}
+      {% assign note_tags_s = note.tags | split: " " %}
       {% assign note_tags_c = note_tags_s | size %}
       {% assign total_tags_c = note_tags_c | plus: page_tags_c %}
       note tag array: {{note_tags_s}}
