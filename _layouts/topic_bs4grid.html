@@ -19,7 +19,9 @@ layout: default_bs4grid
 <div class="row bg-secondary text-secondary px-3 pb-3">
     {% assign page_tags_s = page.tags | split: ',' %}
     {% assign page_tags_c = page.tags | size %}
-    {{page_tags_s}}<br />{{page_tags_c}}
+    {{page_tags_s}}<br />
+    {{page.tags}}<br />
+    {{page_tags_c}}
   <div class="flex-content">
     {% for note in site.notes %}
       title {{note.title}}
