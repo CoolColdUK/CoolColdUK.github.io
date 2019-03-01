@@ -37,6 +37,10 @@ layout: default_bs4grid
       {% assign combine_tags = page_tags_s | concat: note_tags_s %}
       {% assign combine_tags_u = combine_tags | uniq %}
       {% assign combine_tags_c = combine_tags_u | size %}
+
+      {% for c in combine_tags %}
+        array: {{c}}
+      {%endfor%}
       combine tag {{combine_tags}}
       combine tag unique {{combine_tags_u}}
       combine tag size {{combine_tags_c}}
