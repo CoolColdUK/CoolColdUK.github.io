@@ -27,12 +27,15 @@ layout: default_bs4grid
       title {{note.title}}
       tags {{note.tags}}
     
-      {% assign note_tags_c = note.tags | size %}
+      {% assign note_tags = note.tags | split: ',' %}
+      {% assign note_tags_c = note_tags | size %}
       {% assign total_tags_c = note_tags_c | plus: page_tags_c %}
       note tag size {{note_tags_c}}
       total size {{total_tags_c}}
 
-      {% assign combine_tags = page.tags | combine: note.tags %}
+      
+
+      {% assign combine_tags = page.tags | combine: note_tags %}
       {% assign combine_tags_u = combine_tags | uniq %}
       {% assign combine_tags_c = combine_tags_u | size %}
       combine tag {{combine_tags}}
