@@ -1,7 +1,7 @@
 ---
 name: fundamental analysis
 full_name: fundamental analysis
-tags: trading
+tags: [trading]
 ---
 ## What is fundamental analysis
 Fundamental analysis is a method of evaluating a security in an attempt to assess its intrinsic value, by examining related economic, financial, and other qualitative and quantitative factors. Fundamental analysts study anything that can affect the security's value, including macroeconomic factors (e.g. economy and industry conditions) and microeconomic factors (e.g. financial conditions and company management). The end goal of fundamental analysis is to produce a quantitative value that an investor can compare with a security's current price, thus indicating whether the security is undervalued or overvalued.

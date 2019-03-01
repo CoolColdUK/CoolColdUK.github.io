@@ -1,7 +1,7 @@
 ---
 name: technical analysis
 full_name: technical analysis
-tags: trading
+tags: [trading]
 ---
 ## What is technical analysis
 Technical analysis is an analysis methodology for forecasting the direction of prices through the study of past market data, primarily price and volume. This means the method tries to understand what the market thinks based on action taken by the market, and predict the price movement

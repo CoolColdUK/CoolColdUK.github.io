@@ -1,4 +1,4 @@
 ---
-tags: bootstrap
+tags: [bootstrap]
 ---
 bootstrap

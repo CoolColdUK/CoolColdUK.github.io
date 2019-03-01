@@ -1,7 +1,7 @@
 ---
 name: basics of trading
 full_name: basics of trading
-tags: trading
+tags: [trading]
 ---
 ## Basics Of Trading
 The aim of most people for trading stocks or commodities is to make money. No matter what the reason behind it, be it to find the holy grail, or to have financial freedom. In order to make money, one has to buy the commodity at low price, and sell at high price.
