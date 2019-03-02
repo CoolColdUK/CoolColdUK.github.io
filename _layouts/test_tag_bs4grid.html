@@ -17,11 +17,21 @@ layout: default_bs4grid
   {{ content }}
 </div>
 
-<div class="row bg-secondary text-secondary px-3 pb-3">
-    {{page.tags}}<br />
 
+<div class="row bg-secondary text-secondary px-3 pb-3">
+  just tags:<br />
+  {{page.tags}}<br />
+  {% for c in page.tags %}
+      array: {{c}}
+    {%endfor%}
+</div>
+
+{% assign fruits = "apples, oranges, peaches" | split: ", " %}
+<div class="row bg-secondary text-secondary px-3 pb-3">
+concat:
     
-    {% for c in page.tags %}
+    {% assign everything = page.tags | concat: fruits %}
+    {% for c in everything %}
       array: {{c}}
     {%endfor%}
 </div>
