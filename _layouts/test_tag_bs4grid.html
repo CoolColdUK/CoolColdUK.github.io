@@ -22,16 +22,25 @@ layout: default_bs4grid
   just tags:<br />
   {{page.tags}}<br />
   {% for c in page.tags %}
-      array: {{c}}
-    {%endfor%}
+  array: {{c}}
+  {%endfor%}
 </div>
 
-{% assign fruits = "apples, oranges, peaches" | split: ", " %}
+{% assign fruits = "array, oranges, peaches" | split: ", " %}
 <div class="row bg-secondary text-secondary px-3 pb-3">
-concat:
-    
-    {% assign everything = page.tags | concat: fruits %}
-    {% for c in everything %}
-      array: {{c}}
-    {%endfor%}
+  concat:
+
+  {% assign everything = page.tags | concat: fruits %}
+  {% for c in everything %}
+  array: {{c}}
+  {%endfor%}
+</div>
+
+<div class="row bg-secondary text-secondary px-3 pb-3">
+  uniq:
+
+  {% assign everything2 = everything | uniq %}
+  {% for c in everything2 %}
+  array: {{c}}
+  {%endfor%}
 </div>
