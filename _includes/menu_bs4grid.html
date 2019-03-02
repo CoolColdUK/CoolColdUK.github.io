@@ -13,8 +13,8 @@
                 {% endfor %}
             </div>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">                
-                {% for topic in site.test_tag %}
-                    <a class="dropdown-item" href="{{ topic.url }}">{{ topic.name }}</a>
+                {% for t in site.test_tag %}
+                    <a class="dropdown-item" href="{{ t.url }}">{{ t.name }}</a>
                 {% endfor %}
             </div>
         </li>
