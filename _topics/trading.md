@@ -1,6 +1,6 @@
 ---
 name: trading
 full_name: trading
-tags: [trading]
+tags: trading
 ---
 This is about financial trading.
