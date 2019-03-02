@@ -12,6 +12,11 @@
                     <a class="dropdown-item" href="{{ topic.url }}">{{ topic.name }}</a>
                 {% endfor %}
             </div>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">                
+                {% for topic in site.test_tag %}
+                    <a class="dropdown-item" href="{{ topic.url }}">{{ topic.name }}</a>
+                {% endfor %}
+            </div>
         </li>
     </ul>
 </div>

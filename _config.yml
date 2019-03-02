@@ -7,6 +7,9 @@ collections:
   topics:
     output: true
     permalink: /:path
+  test_tags:
+    output: true
+    permalink: /:path
 
     
 defaults:
@@ -15,6 +18,11 @@ defaults:
       type: "topics"
     values:
       layout: "topic_bs4grid"
+  - scope:
+      path: ""
+      type: "test_tags"
+    values:
+      layout: "test_tag_bs4grid"
   - scope:
       path: ""
       type: "notes"
