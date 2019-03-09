@@ -1,6 +1,4 @@
 ---
-name: technical analysis
-full_name: technical analysis
 tags: [trading]
 ---
 ## What is technical analysis

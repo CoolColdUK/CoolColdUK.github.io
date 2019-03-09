@@ -1,6 +1,4 @@
 ---
-name: fundamental analysis
-full_name: fundamental analysis
 tags: [trading]
 ---
 ## What is fundamental analysis
