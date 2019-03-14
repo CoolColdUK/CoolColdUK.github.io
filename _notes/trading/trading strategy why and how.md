@@ -5,7 +5,7 @@ tags: [trading]
 A trading strategy is method of buying and selling in markets that is based on predefined rules used to make trading decisions.
 
 ## Why do you need a trading strategy
-By writing odown the actual rules or steps you follow for each trade, this makes your trading **Actionable**. This is such that there will not be any argument or misunderstanding on how to trade. Treat it like a contract on what you would do for performing trades.
+By writing down the actual rules or steps you follow for each trade, this makes your trading **Actionable**. This is such that there will not be any argument or misunderstanding on how to trade. Treat it like a contract on what you would do for performing trades.
 
 Over time using the same strategy, this also allows you to measure the performance of the strategy such as win rate and risk reward ratio. This makes your trading **Measureable** and allow you to improve upon it.
 
