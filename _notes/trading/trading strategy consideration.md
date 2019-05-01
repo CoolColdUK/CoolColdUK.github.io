@@ -1,3 +1,6 @@
+---
+tags: [trading]
+---
 ## Thing to consider when developing a trading strategy
 1. Market condition
 2. Asset condition
