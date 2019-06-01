@@ -1,3 +1,0 @@
----
----
-Package manager for Kubernetes
