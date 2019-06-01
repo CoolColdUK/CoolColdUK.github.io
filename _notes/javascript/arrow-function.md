@@ -6,7 +6,7 @@ arrow functions are roughly the equivalent of lambda functions in python or bloc
 
 An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to the this, arguments, super, or new.target keywords. Arrow function expressions are ill suited as methods, and they cannot be used as constructors.
 
-The goal of Arrow Functions is to address and resolve several common pain points of traditional ```Function``` Expression: 
+The goal of Arrow Functions is to address and resolve several common pain points of traditional `Function` Expression: 
 pros:
 
 * Lexical this binding;
