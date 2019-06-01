@@ -1,5 +1,5 @@
 ---
-tags: 
+tags: kubernetes
 source: https://www.mirantis.com/blog/kubernetes-replication-controller-replica-set-and-deployments-understanding-replication-options/
 summary: ensures a specified number of pod replicas are running. Replaces by replica set and deployments
 ---
