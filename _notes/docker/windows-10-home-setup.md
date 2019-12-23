@@ -51,7 +51,31 @@ After setting port forwarding, the site can be accessed via ip of virtualbox
 1. run bash
 2. connect via ssh using ``docker-machine ssh <vm name>``
 
+### Watchmedo does not work
+If the docker is run behind virtual box and the files are changed in the host system, watchmedo will not work as of now. Only changes in the virtual box directly, even if it is mounted volume, will allow it to work.
+
+A dumb work around is to run ``touch <file>`` to trigger a reload manually, using ssh into the virtual box.
+
+A potential solution is to use inotifywait.
+
+Create a file run.sh
+```
+while true
+do
+        inotifywait -e create -e modify  /path/to/python/script
+        pkill python
+        python /path/to/python/script
+done
+```
+
+in the docker file, use
+```
+COPY run.sh /run.sh
+CMD ["bash", "-l", "/run.sh"]
+```
+
 # Source
 1. https://github.com/docker/for-win/issues/1825
 2. https://www.sitepoint.com/docker-windows-10-home/
 3. https://osric.com/chris/accidental-developer/2018/04/python-flask-and-virtualbox-networking/
+4. https://stackoverflow.com/a/33469308
